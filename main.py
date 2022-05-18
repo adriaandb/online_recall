@@ -1,16 +1,16 @@
 import mysql.connector
 from mysql.connector import (connection)
-'''
+
 db = connection.MySQLConnection(user='sql11491613', password='eWFcPv5Ndt',
                                 host='35.157.16.43',
                                 database='sql11491613')
-'''
 
+'''
 db = connection.MySQLConnection(user='Xpjf2Sfx1l', password='EZIFTyptKF',
                                 host='37.59.55.185',
                                 database='Xpjf2Sfx1l')
 
-
+'''
 
 
 
@@ -168,7 +168,7 @@ def run_write_controls():
 def run_read_controls():
     pass
 
-
+voeg_user_toe()
 
 
 db.close()
