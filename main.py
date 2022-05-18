@@ -1,9 +1,18 @@
 import mysql.connector
 from mysql.connector import (connection)
-
+'''
 db = connection.MySQLConnection(user='sql11491613', password='eWFcPv5Ndt',
                                 host='35.157.16.43',
                                 database='sql11491613')
+'''
+
+db = connection.MySQLConnection(user='Xpjf2Sfx1l', password='EZIFTyptKF',
+                                host='37.59.55.185',
+                                database='Xpjf2Sfx1l')
+
+
+
+
 
 mycursor = db.cursor()
 db_name = "sql11491613"
@@ -14,7 +23,7 @@ for x in mycursor:
 
 users = mycursor.execute("SELECT * FROM users;")
 for x in mycursor:
-    print(x)
+    print(*x)
 
 
 # ----------------------------------------------
@@ -109,10 +118,10 @@ def alter_permissions():
     ap_userID = input("geef ID van user:")
     antw = ""
     while not antw == "y":
-        print("ben je zeker dat je de volgende user de permissie wilt veranderen?:")
+        print("ben je zeker dat je van de volgende user de permissie wilt veranderen?:")
         mycursor.execute("SELECT * FROM users WHERE userID=" + ap_userID + ";")
         for x in mycursor:
-            print(x)
+            print(*x)
         antw = input("y/n")
         if not antw == "y":
             ap_userID = input("geef ID van te wissen user:")
@@ -160,6 +169,6 @@ def run_read_controls():
     pass
 
 
-alter_user()
+
 
 db.close()
